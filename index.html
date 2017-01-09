@@ -12,13 +12,52 @@
     <div class="slides">
 
       <section>
-        <h2>Working with Entity Framework Core</h2>
+        <h1>Working with Entity Framework Core</h1>
         <h6>Seth Puckett / @sethpuckett / www.sethpuckett.com</h6>
       </section>
  
       <section>
-        <h1>What is Entity Framework Core?</h1>
-        <aside>ORM, history of EF</aside>
+        <section>
+          <h1>What is Entity Framework Core?</h1>
+          <aside class="notes">ORM, history of EF</aside>
+        </section>
+
+        <section>
+          <h2>Object Relational Mapper for .Net</h2>
+          <p>From Wikipedia: Object-relational mapping in computer science is a programming technique for converting data between incompatible type systems in object-oriented programming languages.</p>
+        </section>
+
+        <section>
+          <img style="width:66%;" src="img/person-class.png">
+          <img style="width:66%;" src="img/person-table.png">
+        </section>
+
+        <section>
+          <h3>Benefits</h3>
+          <ul>
+            <li>Reduction in tedious, redundant mapping code</li>
+            <li>Changes to the model handled in one place</li>
+            <li>Robust data querying out of the box</li>
+            <li>Easy relationship navigation</li>
+            <li>Data caching for improved performance</li>
+            <li>Transaction management</li>
+            <li>Easier database versioning</li>
+            <li>Concurrency management</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Examples of ORMs</h3>
+          <ul>
+            <li>Ruby - ActiveRecord, DataMapper</li>
+            <li>Python - Django (built-in), SQLAlchemy</li>
+            <li>Javascript - Sequelize, Bookshelf.js</li>
+            <li>Java - Hibernate </li>
+            <li>PHP - Propel</li>
+            <li>.Net - Entity Framework, NHibernate</li>
+          </ul>
+        </section>
+
       </section>
  
       <section>
