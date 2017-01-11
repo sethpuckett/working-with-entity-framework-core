@@ -83,26 +83,134 @@
           <ul>
             <li>EF Core was originally titled Entity Framework 7, but was renamed to highlight the fact that the new version was a ground-up rewrite of the platform.</li>
             <li>Different feature set: EF Core is still in its infancy, it lacks many of the features of EF6</li>
-            <li>Cross Platform: Just like ASP.Net Core, EF Core is available for Mac and Linux developers</li>
+            <li>Cross Platform: Just like ASP.Net Core, EF Core is available on Mac and Linux</li>
             <li>Speed: EF Core performs insert, update, and delete operations significantly faster than EF6 on average</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Feature Comparison</h3>
+          <table>
+            <tr>
+              <td><strong>Feature</strong></td>
+              <td><strong>EF6</strong></td>
+              <td><strong>EF Core</strong></td>
+            </tr>
+            <tr>
+              <td>Lazy Loading</td>
+              <td>Yes</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Stored Procedure Execution</td>
+              <td>Yes</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Seed Data</td>
+              <td>Yes</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Many-to-Many w/ Out Join Entity</td>
+              <td>Yes</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Client Side Key Generation</td>
+              <td></td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Mixed Client/Server Evaluation</td>
+              <td></td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Raw SQL in LINQ Queries</td>
+              <td></td>
+              <td>Yes</td>
+            </tr> 
+          </table>
+          <p>Full Feature Comparison at <a href="https://docs.microsoft.com/en-us/ef/efcore-and-ef6/features">docs.microsoft.com</a></p>
+        </section>
+
+        <section>
+          <h3>Cross Platform</h3>
+          <p>Microsoft has been making a big push towards cross platform and open source development with tools and frameworks like EF Core, ASP.Net Core, Xamarin, and Visual Studio Code. Read more <a href="https://www.excella.com/insights/microsoft-and-open-source-together-at-last">here</a> and <a href="https://www.excella.com/insights/5-myths-about-net">here</a>.</p>
+          <p>Platforms Supported: <strong>Windows</strong>, <strong>MacOS</strong>, <strong>Linux</strong>, <strong>Android </strong>, <strong>iOS</strong></p>
+        </section>
+
+        <section>
+          <h3>Feature Roadmap</h3>
+          <ul>
+            <li>Lazy Loading</li>
+            <li>Stored Procedure and View Mapping</li>
+            <li>Many-to-Many Relationships w/ Out Join Entity</li>
+            <li>Seed Data</li>
+            <li>Eager Loading Rules and Filtered Loading</li>
+            <li>Non-Relational Database Support (NoSQL)</li>
+            <li>Improved SQL Translation (Faster Queries)</li>
+          </ul>
+          <p>Full Roadmap on <a href="https://github.com/aspnet/EntityFramework/wiki/Roadmap">Github</a></p>
+        </section>
+
+      </section>
+
+      <section>
+
+        <section>
+          <h3>Demo</h3>
+          <h2>[put image here]</h2>
+        </section>
+
+        <section>
+          <h3>Functionality</h3>
+          <ul>
+            <li>Add a Todo with a title and description</li>
+            <li>Set the status of a Todo to 'Not Started', 'In Progress', or 'Finished'</li>
+            <li>Add and associate Tags with Todos.</li>
+            <li>Remove a Todo</li>
+            <li>Remove all 'Finished' Todos</li>
           </ul>
         </section>
 
       </section>
 
       <section>
-        <h1>New Features and features to come</h1>
-        <aside>NoSQL support</aside>
+
+        <section>
+          <h1>Setting Up a New Project with EF Core</h1>
+        </section>
+        
+        <section>
+          <h3>Overview</h3>
+          <ul>
+            <li>Works with .Net Framework or .Net Core</li>
+            <li>Works with existing database (database first) or new database (code first)</li>
+            <li>Supports many popular database providers (SQL Server, Postgres, MySql, SQLite); Oracle still absent</li>
+            <li>.Net Core applications can be developed in Visual Studio, Visual Studio Code, or the text editor of your choice</li>
+            <li>All demo code for this presentation is on <a href="https://github.com/sethpuckett/entity-framework-core-demo">Github</a></li>
+          </ul>
+          <p>Full setup instructions at <a href="https://docs.microsoft.com/en-us/ef/core/index">docs.microsoft.com.</a></p>
+          <aside class="notes">Walk through new project setup</aside>
+        </section>
+
+        <section>
+          <h3>ASP.Net Core Web API Overview</h3>
+          <ul>
+            <li>project.json: Configure dependencies</li>
+            <li>Startup.cs: Configures request pipeline thta handles all requests made to the application. More info on <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup">docs.microsoft.com.</a></li>
+            <li>Controllers: Controller classes are where we define our API endpoints.</li>
+          </ul>
+        </section>
+
       </section>
 
-      <section>
-        <h1>Setup</h1>
-        <aside>https://docs.microsoft.com/en-us/ef/core/index</aside>
-        <aside>Works with .Net Framework or .Net Core</aside>
-        <aside>Works with existing database (database first) or new database (code first)</aside>
-        <aside>Supports many popular database providers (SQL Server, Postgres, MySql, SQLite); Oracle still absent</aside>
-        <aside>Setup Demo (visual studio code, asp.net core, sql server)</aside>
-      </section>
+
+
+
+
 
       <section>
         <h1>Entity Framework CLI</h1>
