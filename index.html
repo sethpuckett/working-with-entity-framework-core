@@ -1,230 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Entity Framework Core</title>
-  <link rel="stylesheet" href="plugins/reveal.js-3.3.0/css/reveal.css">
-  <link rel="stylesheet" href="plugins/reveal.js-3.3.0/css/theme/league.css" id="theme">
-  <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <title>Entity Framework Core</title>
+    <link rel="stylesheet" href="plugins/reveal.js-3.3.0/css/reveal.css">
+    <link rel="stylesheet" href="plugins/reveal.js-3.3.0/css/theme/league.css" id="theme">
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-  <div class="reveal">
-    <div class="slides">
+    <div class="reveal">
+        <div class="slides">
 
-      <section>
-        <h1>Working with Entity Framework Core</h1>
-        <h6>Seth Puckett / @sethpuckett / www.sethpuckett.com</h6>
-        <h6>Excella Consulting / @excellaco / www.excella.com</h6>
-        <a href="https://sethpuckett.github.io/working-with-entity-framework-core">sethpuckett.github.io/working-with-entity-framework-core/</a>
-        <a href="https://github.com/sethpuckett/entity-framework-core-demo">github.com/sethpuckett/entity-framework-core-demo</a>
-      </section>
- 
-      <section>
-        <section>
-          <h1>What is Entity Framework Core?</h1>
-          <aside class="notes">ORM, history of EF</aside>
-        </section>
+            <section>
+                <h1>Working with Entity Framework Core</h1>
+                <h6>Seth Puckett / @sethpuckett / www.sethpuckett.com</h6>
+                <h6>Excella Consulting / @excellaco / www.excella.com</h6>
+                <a href="https://sethpuckett.github.io/working-with-entity-framework-core">sethpuckett.github.io/working-with-entity-framework-core/</a>
+                <a href="https://github.com/sethpuckett/entity-framework-core-demo">github.com/sethpuckett/entity-framework-core-demo</a>
+            </section>
 
-        <section>
-          <h2>Object Relational Mapper for .Net</h2>
-          <p>From Wikipedia: Object-relational mapping in computer science is a programming technique for converting data between incompatible type systems in object-oriented programming languages.</p>
-        </section>
+            <section>
+                <section>
+                    <h1>What is Entity Framework Core?</h1>
+                    <aside class="notes">ORM, history of EF</aside>
+                </section>
 
-        <section>
-          <img style="width:66%;" src="img/person-class.png">
-          <img style="width:66%;" src="img/person-table.png">
-        </section>
+                <section>
+                    <h2>Object Relational Mapper for .Net</h2>
+                    <p>From Wikipedia: Object-relational mapping in computer science is a programming technique for converting data between incompatible type systems in object-oriented programming languages.</p>
+                </section>
 
-        <section>
-          <h3>Benefits</h3>
-          <ul>
-            <li>Reduction in tedious, redundant mapping code</li>
-            <li>Changes to the model handled in one place</li>
-            <li>Robust data querying out of the box</li>
-            <li>Easy relationship navigation</li>
-            <li>Data caching for improved performance</li>
-            <li>Transaction management</li>
-            <li>Easier database versioning</li>
-          </ul>
-        </section>
+                <section>
+                    <img style="width:66%;" src="img/person-class.png">
+                    <img style="width:66%;" src="img/person-table.png">
+                </section>
 
-        <section>
-          <h3>Examples of ORMs</h3>
-          <ul>
-            <li>Ruby - ActiveRecord, DataMapper</li>
-            <li>Python - Django (built-in), SQLAlchemy</li>
-            <li>Javascript - Sequelize, Bookshelf.js</li>
-            <li>Java - Hibernate </li>
-            <li>PHP - Propel</li>
-            <li>.Net - Entity Framework, NHibernate</li>
-          </ul>
-        </section>
+                <section>
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Reduction in tedious, redundant mapping code</li>
+                        <li>Changes to the model handled in one place</li>
+                        <li>Robust data querying out of the box</li>
+                        <li>Easy relationship navigation</li>
+                        <li>Data caching for improved performance</li>
+                        <li>Transaction management</li>
+                        <li>Easier database versioning</li>
+                    </ul>
+                </section>
 
-        <section>
-          <h3>History of Entity Framework</h3>
-          <ul>
-            <li><strong>2008</strong>: EF1 released as a part of .Net Framework 3.5 SP 1.</li>
-            <li><strong>2010</strong>: EF4 was released as a part of .Net 4.0.</li>
-            <li><strong>2011-2012</strong>: Incremental updates up to EF5.</li>
-            <li><strong>2013</strong>: EF6 released as an open source project under the Apache License; Source is hosted on Github.</li>
-            <li><strong>2016</strong>: EF Core 1.0 released alongside ASP.Net Core 1.0. Also released under the Apache License. All development being done openly on Github.</li>
-          </ul>
-        </section>
+                <section>
+                    <h3>Examples of ORMs</h3>
+                    <ul>
+                        <li>Ruby - ActiveRecord, DataMapper</li>
+                        <li>Python - Django (built-in), SQLAlchemy</li>
+                        <li>Javascript - Sequelize, Bookshelf.js</li>
+                        <li>Java - Hibernate </li>
+                        <li>PHP - Propel</li>
+                        <li>.Net - Entity Framework, NHibernate</li>
+                    </ul>
+                </section>
 
-      </section>
- 
-      <section>
+                <section>
+                    <h3>History of Entity Framework</h3>
+                    <ul>
+                        <li><strong>2008</strong>: EF1 released as a part of .Net Framework 3.5 SP 1.</li>
+                        <li><strong>2010</strong>: EF4 was released as a part of .Net 4.0.</li>
+                        <li><strong>2011-2012</strong>: Incremental updates up to EF5.</li>
+                        <li><strong>2013</strong>: EF6 released as an open source project under the Apache License; Source is hosted on Github.</li>
+                        <li><strong>2016</strong>: EF Core 1.0 released alongside ASP.Net Core 1.0. Also released under the Apache License. All development being done openly on Github.</li>
+                    </ul>
+                </section>
 
-        <section>
-          <h1>Differences between EF6 and EF Core</h1>
-          <aside class="notes">cross platform, feature differences, size, speed</aside>
-        </section>
+            </section>
 
-        <section>
-          <h3>Overview</h3>
-          <ul>
-            <li>EF Core was originally titled Entity Framework 7, but was renamed to highlight the fact that the new version was a ground-up rewrite of the platform.</li>
-            <li>Different feature set: EF Core is still in its infancy, it lacks many of the features of EF6</li>
-            <li>Cross Platform: Just like ASP.Net Core, EF Core is available on Mac and Linux</li>
-            <li>Speed: EF Core performs insert, update, and delete operations significantly faster than EF6 on average</li>
-          </ul>
-        </section>
+            <section>
 
-        <section>
-          <h3>Feature Comparison</h3>
-          <table>
-            <tr>
-              <td><strong>Feature</strong></td>
-              <td><strong>EF6</strong></td>
-              <td><strong>EF Core</strong></td>
-            </tr>
-            <tr>
-              <td>Lazy Loading</td>
-              <td>Yes</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Stored Procedure Execution</td>
-              <td>Yes</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Seed Data</td>
-              <td>Yes</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Many-to-Many w/ Out Join Entity</td>
-              <td>Yes</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Client Side Key Generation</td>
-              <td></td>
-              <td>Yes</td>
-            </tr>
-            <tr>
-              <td>Mixed Client/Server Evaluation</td>
-              <td></td>
-              <td>Yes</td>
-            </tr>
-            <tr>
-              <td>Raw SQL in LINQ Queries</td>
-              <td></td>
-              <td>Yes</td>
-            </tr> 
-          </table>
-          <p>Full Feature Comparison at <a href="https://docs.microsoft.com/en-us/ef/efcore-and-ef6/features">docs.microsoft.com</a></p>
-        </section>
+                <section>
+                    <h1>Differences between EF6 and EF Core</h1>
+                    <aside class="notes">cross platform, feature differences, size, speed</aside>
+                </section>
 
-        <section>
-          <h3>Cross Platform</h3>
-          <p>Microsoft has been making a big push towards cross platform and open source development with tools and frameworks like EF Core, ASP.Net Core, Xamarin, and Visual Studio Code. Read more <a href="https://www.excella.com/insights/microsoft-and-open-source-together-at-last">here</a> and <a href="https://www.excella.com/insights/5-myths-about-net">here</a>.</p>
-          <p>Platforms Supported: <strong>Windows</strong>, <strong>MacOS</strong>, <strong>Linux</strong>, <strong>Android </strong>, <strong>iOS</strong></p>
-        </section>
+                <section>
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>EF Core was originally titled Entity Framework 7, but was renamed to highlight the fact that the new version was a ground-up rewrite of the platform.</li>
+                        <li>Different feature set: EF Core is still in its infancy, it lacks many of the features of EF6</li>
+                        <li>Cross Platform: Just like ASP.Net Core, EF Core is available on Mac and Linux</li>
+                        <li>Speed: EF Core performs insert, update, and delete operations significantly faster than EF6 on average</li>
+                    </ul>
+                </section>
 
-        <section>
-          <h3>Feature Roadmap</h3>
-          <ul>
-            <li>Lazy Loading</li>
-            <li>Stored Procedure and View Mapping</li>
-            <li>Many-to-Many Relationships w/ Out Join Entity</li>
-            <li>Seed Data</li>
-            <li>Eager Loading Rules and Filtered Loading</li>
-            <li>Non-Relational Database Support (NoSQL)</li>
-            <li>Improved SQL Translation (Faster Queries)</li>
-          </ul>
-          <p>Full Roadmap on <a href="https://github.com/aspnet/EntityFramework/wiki/Roadmap">Github</a></p>
-        </section>
+                <section>
+                    <h3>Feature Comparison</h3>
+                    <table>
+                        <tr>
+                            <td><strong>Feature</strong></td>
+                            <td><strong>EF6</strong></td>
+                            <td><strong>EF Core</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Lazy Loading</td>
+                            <td>Yes</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Stored Procedure Execution</td>
+                            <td>Yes</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Seed Data</td>
+                            <td>Yes</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Many-to-Many w/ Out Join Entity</td>
+                            <td>Yes</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Client Side Key Generation</td>
+                            <td></td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Mixed Client/Server Evaluation</td>
+                            <td></td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Raw SQL in LINQ Queries</td>
+                            <td></td>
+                            <td>Yes</td>
+                        </tr>
+                    </table>
+                    <p>Full Feature Comparison at <a href="https://docs.microsoft.com/en-us/ef/efcore-and-ef6/features">docs.microsoft.com</a></p>
+                </section>
 
-      </section>
+                <section>
+                    <h3>Cross Platform</h3>
+                    <p>Microsoft has been making a big push towards cross platform and open source development with tools and frameworks like EF Core, ASP.Net Core, Xamarin, and Visual Studio Code. Read more <a href="https://www.excella.com/insights/microsoft-and-open-source-together-at-last">here</a>                        and <a href="https://www.excella.com/insights/5-myths-about-net">here</a>.</p>
+                    <p>Platforms Supported: <strong>Windows</strong>, <strong>MacOS</strong>, <strong>Linux</strong>, <strong>Android </strong>, <strong>iOS</strong></p>
+                </section>
 
-      <section>
+                <section>
+                    <h3>Feature Roadmap</h3>
+                    <ul>
+                        <li>Lazy Loading</li>
+                        <li>Stored Procedure and View Mapping</li>
+                        <li>Many-to-Many Relationships w/ Out Join Entity</li>
+                        <li>Seed Data</li>
+                        <li>Eager Loading Rules and Filtered Loading</li>
+                        <li>Non-Relational Database Support (NoSQL)</li>
+                        <li>Improved SQL Translation (Faster Queries)</li>
+                    </ul>
+                    <p>Full Roadmap on <a href="https://github.com/aspnet/EntityFramework/wiki/Roadmap">Github</a></p>
+                </section>
 
-        <section>
-          <h1>Setting Up a New Project with EF Core</h1>
-        </section>
-        
-        <section>
-          <h3>Overview</h3>
-          <ul>
-            <li>Works with .Net Framework or .Net Core</li>
-            <li>Works with existing database (database first) or new database (code first)</li>
-            <li>Supports many popular database providers (SQL Server, Postgres, MySql, SQLite); Oracle still absent</li>
-            <li>.Net Core applications can be developed in Visual Studio, Visual Studio Code, or the text editor of your choice</li>
-            <li>All demo code for this presentation is on <a href="https://github.com/sethpuckett/entity-framework-core-demo">Github</a></li>
-          </ul>
-          <p>Full setup instructions at <a href="https://docs.microsoft.com/en-us/ef/core/index">docs.microsoft.com.</a></p>
-          <aside class="notes">Walk through new project setup</aside>
-        </section>
+            </section>
 
-        <section>
-          <h3>ASP.Net Core Web API Overview</h3>
-          <ul>
-            <li>project.json: Configure dependencies</li>
-            <li>Startup.cs: Configures request pipeline thta handles all requests made to the application. More info on <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup">docs.microsoft.com.</a></li>
-            <li>Controllers: Controller classes are where we define our API endpoints.</li>
-          </ul>
-        </section>
+            <section>
 
-      </section>
+                <section>
+                    <h1>Setting Up a New Project with EF Core</h1>
+                </section>
 
-      <section>
+                <section>
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>Works with .Net Framework or .Net Core</li>
+                        <li>Works with existing database (database first) or new database (code first)</li>
+                        <li>Supports many popular database providers (SQL Server, Postgres, MySql, SQLite); Oracle still absent</li>
+                        <li>.Net Core applications can be developed in Visual Studio, Visual Studio Code, or the text editor of your choice</li>
+                        <li>All demo code for this presentation is on <a href="https://github.com/sethpuckett/entity-framework-core-demo">Github</a></li>
+                    </ul>
+                    <p>Full setup instructions at <a href="https://docs.microsoft.com/en-us/ef/core/index">docs.microsoft.com.</a></p>
+                    <aside class="notes">Walk through new project setup</aside>
+                </section>
 
-        <section>
-          <h3>Demo</h3>
-          <img src="img/demo-img.png">
-        </section>
+                <section>
+                    <h3>ASP.Net Core Web API Overview</h3>
+                    <ul>
+                        <li>*.csproj: Configure dependencies (replaces project.json)</li>
+                        <li>Startup.cs: Configures request pipeline thta handles all requests made to the application. More info on <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup">docs.microsoft.com.</a></li>
+                        <li>Controllers: Controller classes are where we define our API endpoints.</li>
+                    </ul>
+                </section>
 
-        <section>
-          <h3>Functionality</h3>
-          <ul>
-            <li>Add a Todo with a title and description</li>
-            <li>Set the status of a Todo to 'New', or 'Finished'</li>
-            <li>Add and associate Tags with Todos.</li>
-            <li>Remove a Todo</li>
-            <li>Remove all 'Finished' Todos</li>
-          </ul>
-        </section>
+            </section>
 
-      </section>
+            <section>
 
-      <section>
-        <h1>Question?</h1>
-      </section>
+                <section>
+                    <h3>Demo</h3>
+                    <img src="img/demo-img.png">
+                </section>
 
-      <section>
-        <h2>Thank you!</h2>
-        <h6>Seth Puckett / @sethpuckett / www.sethpuckett.com</h6>
-      </section>
+                <section>
+                    <h3>Functionality</h3>
+                    <ul>
+                        <li>Add a Todo with a title and description</li>
+                        <li>Set the status of a Todo to 'New', or 'Finished'</li>
+                        <li>Add and associate Tags with Todos.</li>
+                        <li>Remove a Todo</li>
+                        <li>Remove all 'Finished' Todos</li>
+                    </ul>
+                </section>
 
+            </section>
+
+            <section>
+                <h1>Question?</h1>
+            </section>
+
+            <section>
+                <h2>Thank you!</h2>
+                <h6>Seth Puckett / @sethpuckett / www.sethpuckett.com</h6>
+            </section>
+
+        </div>
     </div>
-  </div>
-  <script src="plugins/reveal.js-3.3.0/lib/js/head.min.js"></script>
-  <script src="plugins/reveal.js-3.3.0/js/reveal.js"></script>
-  <script>
-    // Required, even if empty.
-    Reveal.initialize({ });
-  </script>
+    <script src="plugins/reveal.js-3.3.0/lib/js/head.min.js"></script>
+    <script src="plugins/reveal.js-3.3.0/js/reveal.js"></script>
+    <script>
+        // Required, even if empty.
+        Reveal.initialize({});
+    </script>
 </body>
+
 </html>
